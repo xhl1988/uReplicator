@@ -38,7 +38,7 @@ trap 'error_handler' ERR
 bash -c "while true; do echo \$(date) - testing ...; sleep $PING_SLEEP; done" &
 PING_LOOP_PID=$!
 
-mvn test -Dtest=HelixMirrorMakerManagerCustomEmptyFullTest  >> $TEST_OUTPUT 2>&1
+mvn test -ff  >> $TEST_OUTPUT 2>&1
 
 # The test finished without returning an error so dump a tail of the output
 dump_output
