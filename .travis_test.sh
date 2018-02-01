@@ -23,7 +23,7 @@ touch $TEST_OUTPUT
 
 dump_output() {
    echo Tailing the last 20000 lines of output:
-   tail -20000 $TEST_OUTPUT
+   tail -2000 $TEST_OUTPUT
 }
 error_handler() {
   echo ERROR: An error was encountered with the test.
